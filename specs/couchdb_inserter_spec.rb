@@ -5,8 +5,13 @@ require "couchdb_inserter"
 
 describe "Put documents" do
   before(:all) do
-    @json = ""
-    FakeWeb.register_uri(:put, "http://couchdb1:5984/product_catalog", :body => @json)
+    @json = "{\"id\":\"1\", \"name\":\"test\"}"
+    FakeWeb.allow_net_connect = false
+    FakeWeb.register_uri(:put, "http://192.168.1.66:5984/product_catalog/1", :body => @json)
+  end
+
+  after(:all) do
+    FakeWeb.allow_net_connect = true
   end
 
   it "should send a put request with json" do

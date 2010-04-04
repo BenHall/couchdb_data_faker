@@ -28,6 +28,5 @@ puts "Inserting"
 docs.each do |d|
   d.each do |d2|
     inserter.put(d2)
-    puts "Inserted"
   end
 end

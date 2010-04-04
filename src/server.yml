@@ -1,0 +1,3 @@
+server: couchdb1
+port: 5984
+db: product_catalog

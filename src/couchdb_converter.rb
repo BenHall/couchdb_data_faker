@@ -3,7 +3,7 @@ class CouchdbConverter
   def to_artist_document(parsed_json)
     @result = []
     parsed_json['Artists']['Artist'].each do |a|
-      hash = {"_id" => a['id'],"name" => a['name'], "website" => a['website'], "tags" => ["Popular"], "type" => "artist"}
+      hash = {"id" => a['id'],"name" => a['name'], "website" => a['website'], "tags" => ["Popular"], "type" => "artist"}
       @result << hash.to_json
     end
     @result

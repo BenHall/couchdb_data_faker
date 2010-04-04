@@ -1,13 +1,18 @@
 require "net/http"
+require 'json'
 
 class CouchdbInserter
   def put(json)
+    hash = JSON.parse(json)
     load_config()
-    http = Net::HTTP.new(get_key('server'), get_key('port').to_s)
-    
-    request = Net::HTTP::Put.new("/" + get_key('db'))
-    request.set_form_data(json)
-    http.request(request)
+
+    request = Net::HTTP::Put.new("/#{get_key('db')}/#{hash['id']}")
+    request.body = json
+    response = Net::HTTP.new(get_key('server'), get_key('port')).start do |http|
+      http.request(request)
+    end
+    puts "Response #{response.code} #{response.message}: #{response.body}"
+    response
   end
 
   def load_config

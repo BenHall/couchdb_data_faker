@@ -3,18 +3,25 @@ require 'net/http'
 require 'yaml'
 
 class Obtainer
+  def query(base_url, results, start)
+    url = "#{base_url}&results=#{results}&start=#{start}"
+    resp = Net::HTTP.get_response(URI.parse(url))
+    data = resp.body
+    return data
+  end
+
   def get_popular_artists(results=100, start=1)
    base_url = "http://us.music.yahooapis.com/artist/v1/list/published/popular?format=json&appid=" + get_key()
-   url = "#{base_url}&results=#{results}&start=#{start}"
-   resp = Net::HTTP.get_response(URI.parse(url))
-   data = resp.body
+   data = query(base_url, results, start)
 
-   result = JSON.parse(data)
+   return JSON.parse(data)
+  end
 
-   if result.has_key? 'Error'
-      raise "web service error"
-   end
-   return result
+  def get_similar_artists(artist, results=100, start=1)
+   base_url = "http://us.music.yahooapis.com/artist/v1/list/similar/#{artist['id']}?format=json&appid=#{get_key()}"
+   data = query(base_url, results, start)
+
+   return JSON.parse(data)
   end
 
   def join_results(set_one, set_two)

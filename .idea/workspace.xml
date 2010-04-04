@@ -36,7 +36,7 @@
       <file leaf-file-name="obtainer_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/specs/obtainer_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="15" selection-end="46" vertical-scroll-proportion="0.0">
+            <state line="45" column="37" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="couchdb_converter_spec.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/specs/couchdb_converter_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="29" selection-start="1259" selection-end="1266" vertical-scroll-proportion="0.3721198">
+            <state line="48" column="38" selection-start="3464" selection-end="3464" vertical-scroll-proportion="0.7453917">
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
       <file leaf-file-name="couchdb_converter.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/couchdb_converter.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+            <state line="14" column="6" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,8 +84,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/specs/obtainer_spec.rb" />
         <option value="$PROJECT_DIR$/src/obtainer.rb" />
-        <option value="$PROJECT_DIR$/src/couchdb_converter.rb" />
         <option value="$PROJECT_DIR$/specs/couchdb_converter_spec.rb" />
+        <option value="$PROJECT_DIR$/src/couchdb_converter.rb" />
       </list>
     </option>
   </component>
@@ -365,21 +365,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/specs/obtainer_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="15" selection-end="46" vertical-scroll-proportion="0.0">
+        <state line="45" column="37" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/couchdb_converter.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+        <state line="14" column="6" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/specs/couchdb_converter_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="1259" selection-end="1266" vertical-scroll-proportion="0.3721198">
+        <state line="48" column="38" selection-start="3464" selection-end="3464" vertical-scroll-proportion="0.7453917">
           <folding />
         </state>
       </provider>

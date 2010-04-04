@@ -4,21 +4,28 @@ require 'yaml'
 
 class Obtainer
   def query(base_url, results, start)
-    url = "#{base_url}&results=#{results}&start=#{start}"
+    url = "#{base_url}?format=json&appid=#{get_key()}&results=#{results}&start=#{start}"
     resp = Net::HTTP.get_response(URI.parse(url))
     data = resp.body
     return data
   end
 
+  def get_artists_releases(artist, results=100, start=1)
+   base_url = "http://us.music.yahooapis.com/release/v1/list/artist/#{artist['id']}"
+   data = query(base_url, results, start)
+
+   return JSON.parse(data)
+  end
+
   def get_popular_artists(results=100, start=1)
-   base_url = "http://us.music.yahooapis.com/artist/v1/list/published/popular?format=json&appid=" + get_key()
+   base_url = "http://us.music.yahooapis.com/artist/v1/list/published/popular"
    data = query(base_url, results, start)
 
    return JSON.parse(data)
   end
 
   def get_similar_artists(artist, results=100, start=1)
-   base_url = "http://us.music.yahooapis.com/artist/v1/list/similar/#{artist['id']}?format=json&appid=#{get_key()}"
+   base_url = "http://us.music.yahooapis.com/artist/v1/list/similar/#{artist['id']}"
    data = query(base_url, results, start)
 
    return JSON.parse(data)

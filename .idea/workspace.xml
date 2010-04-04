@@ -36,7 +36,7 @@
       <file leaf-file-name="obtainer_spec.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/specs/obtainer_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="16" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.7553957">
+            <state line="42" column="25" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.51079136">
               <folding />
             </state>
           </provider>
@@ -45,7 +45,7 @@
       <file leaf-file-name="obtainer.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/obtainer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="80" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
+            <state line="13" column="77" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -338,14 +338,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/obtainer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="80" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
+        <state line="13" column="77" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/specs/obtainer_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="16" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.7553957">
+        <state line="42" column="25" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.51079136">
           <folding />
         </state>
       </provider>

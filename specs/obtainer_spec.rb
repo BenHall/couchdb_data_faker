@@ -26,7 +26,7 @@ describe Obtainer do
   end
 
   describe "Pull similar artists" do
-    before() do
+    before(:all) do
       @obtainer = Obtainer.new
       @artists = @obtainer.get_popular_artists()['Artists']['Artist']
 
@@ -37,6 +37,20 @@ describe Obtainer do
     it "should get 100 similar artists based on 1 initial artist" do
       @result = @obtainer.get_similar_artists(@artist)
       @result['Artists']['Artist'].length.should == 100
+    end
+  end
+
+  describe "Return releases for a artist" do
+    before(:all) do
+      artist_id = '256352'
+      @artist = {'id', artist_id}
+
+      @obtainer = Obtainer.new
+      @result = @obtainer.get_artists_releases(@artist, 10)
+    end
+
+    it "should return 10 releases" do
+      @result['Releases']['Release'].length.should == 10      
     end
   end
 

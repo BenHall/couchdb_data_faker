@@ -8,6 +8,7 @@ describe "Put documents" do
     @json = "{\"id\":\"1\", \"name\":\"test\"}"
     FakeWeb.allow_net_connect = false
     FakeWeb.register_uri(:put, "http://192.168.1.66:5984/product_catalog/1", :body => @json)
+    FakeWeb.register_uri(:put, "http://192.168.1.66:5984/product_catalog", :body => "")
   end
 
   after(:all) do
@@ -21,4 +22,11 @@ describe "Put documents" do
     result = inserter.put @json
     result.should_not be_nil
   end
+
+  it "should create a database" do
+    inserter = CouchdbInserter.new
+    result = inserter.create_db
+    result.should_not be_nil
+  end
+
 end

@@ -7,20 +7,22 @@ o = Obtainer.new
 puts "Getting Popular Artists"
 artists = o.get_popular_artists
 
-#releases = []
-#artists.each do |a|
-#  releases << o.get_artists_releases(a)['Releases']['Release']
-#end
-
+puts "Getting releases"
+releases = []
+artists['Artists']['Artist'].each do |a|
+  releases << o.get_artists_releases(a)
+  break
+end
 
 converter = CouchdbConverter.new
 docs = []
 puts "Coverting Artists"
 docs << converter.to_artist_document(artists)
 
-#releases.each do |r|
-#  docs << converter.to_album_document(r.to_json)
-#end
+puts "Converting releases"
+releases.each do |r|
+  docs << converter.to_album_document(r)
+end
 
 inserter = CouchdbInserter.new
 

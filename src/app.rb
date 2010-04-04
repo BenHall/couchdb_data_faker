@@ -3,6 +3,10 @@ require 'couchdb_inserter'
 require 'couchdb_converter'
 require 'json'
 
+inserter = CouchdbInserter.new
+puts "Creating DB"
+inserter.create_db
+
 o = Obtainer.new
 puts "Getting Popular Artists"
 artists = o.get_popular_artists
@@ -24,7 +28,7 @@ releases.each do |r|
   docs << converter.to_album_document(r)
 end
 
-inserter = CouchdbInserter.new
+
 
 puts "Inserting"
 docs.each do |d|
